@@ -1,5 +1,7 @@
 # Math typesetting using KaTex
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akuma/gitbook-plugin-katex-plus.svg)](https://greenkeeper.io/)
+
 Use it for your book, by adding to your book.json:
 
 ```

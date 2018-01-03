@@ -1,43 +1,44 @@
-var katex = require("katex")
+const katex = require('katex')
 
 module.exports = {
   book: {
-    assets: "./static",
+    assets: './static',
     js: [],
     css: [
-      "katex.min.css"
+      'katex.min.css'
     ]
   },
   ebook: {
-    assets: "./static",
+    assets: './static',
     css: [
-      "katex.min.css"
+      'katex.min.css'
     ]
   },
   blocks: {
-    math: { // double dollar signs ($) for math blocks (centered)
+    math: { // Double dollar signs ($) for math blocks (centered)
       shortcuts: {
-        parsers: ["markdown", "asciidoc", "restructuredtext"],
-        start: "$$",
-        end: "$$"
+        parsers: ['markdown', 'asciidoc', 'restructuredtext'],
+        start: '$$',
+        end: '$$'
       },
-      process: function(blk) {
-        var tex = blk.body
-        var output = katex.renderToString(tex, {
+      process(block) {
+        const tex = block.body
+        console.log('block', block)
+        const output = katex.renderToString(tex, {
           displayMode: true
         })
         return output
       }
     },
-    math_inline: { // single dollar sign for inline math
+    math_inline: { // Single dollar sign for inline math
       shortcuts: {
-        parsers: ["markdown", "asciidoc", "restructuredtext"],
-        start: "$",
-        end: "$"
+        parsers: ['markdown', 'asciidoc', 'restructuredtext'],
+        start: '$',
+        end: '$'
       },
-      process: function(blk) {
-        var tex = blk.body
-        var output = katex.renderToString(tex, {
+      process(block) {
+        const tex = block.body
+        const output = katex.renderToString(tex, {
           displayMode: false
         })
         return output

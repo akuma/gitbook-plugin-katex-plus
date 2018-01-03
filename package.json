@@ -4,7 +4,7 @@
   "main": "index.js",
   "version": "0.1.0",
   "engines": {
-    "gitbook": ">=2.0.0"
+    "gitbook": ">=3.0.0"
   },
   "homepage": "https://github.com/akuma/gitbook-plugin-katex-plus",
   "repository": {
@@ -18,5 +18,8 @@
   "dependencies": {
     "katex": "0.7.1"
   },
-  "keywords": ["math", "latex"]
+  "keywords": [
+    "math",
+    "latex"
+  ]
 }

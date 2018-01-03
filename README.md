@@ -1,10 +1,12 @@
-# Math typesetting using KaTex
+# gitbook-plugin-katex-plus
+
+> Math typesetting using KaTex
 
 Use it for your book, by adding to your book.json:
 
 ```
 {
-    "plugins": ["katex-plus"]
+  "plugins": ["katex-plus"]
 }
 ```
 

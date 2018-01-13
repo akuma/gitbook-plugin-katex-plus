@@ -22,10 +22,9 @@ module.exports = {
         end: '$$'
       },
       process(block) {
-        const tex = block.body
-        const let output = ''
+        let output = ''
         try {
-          output = katex.renderToString(tex, {
+          output = katex.renderToString(block.body, {
             displayMode: true
           })
         } catch (e) {
@@ -42,10 +41,9 @@ module.exports = {
         end: '$'
       },
       process(block) {
-        const tex = block.body
-        const let output = ''
+        let output = ''
         try {
-          output = katex.renderToString(tex, {
+          output = katex.renderToString(block.body, {
             displayMode: false
           })
         } catch (e) {

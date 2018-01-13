@@ -23,10 +23,15 @@ module.exports = {
       },
       process(block) {
         const tex = block.body
-        console.log('block', block)
-        const output = katex.renderToString(tex, {
-          displayMode: true
-        })
+        const let output = ''
+        try {
+          output = katex.renderToString(tex, {
+            displayMode: true
+          })
+        } catch (e) {
+          console.error(e)
+          output = e
+        }
         return output
       }
     },
@@ -38,9 +43,15 @@ module.exports = {
       },
       process(block) {
         const tex = block.body
-        const output = katex.renderToString(tex, {
-          displayMode: false
-        })
+        const let output = ''
+        try {
+          output = katex.renderToString(tex, {
+            displayMode: false
+          })
+        } catch (e) {
+          console.error(e)
+          output = e
+        }
         return output
       }
     }

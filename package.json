@@ -16,7 +16,7 @@
     "url": "https://github.com/akuma/gitbook-plugin-katex-plus/issues"
   },
   "dependencies": {
-    "katex": "0.7.1"
+    "katex": "^0.8.3"
   },
   "keywords": [
     "math",
